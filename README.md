@@ -6,25 +6,25 @@
 url-shortener-ozon/
 ├── api/
 │   ├── grpcserver/
-│   │   └── server.go         # Реализация gRPC сервера
+│   │   └── server.go                   # Реализация gRPC сервера
 │   └── restserver/
-│       └── server.go         # Реализация REST сервера
+│       └── server.go                   # Реализация REST сервера
 ├── cmd/
 │   └── url-shortener/
-│       └── main.go           # Точка входа в приложение
+│       └── main.go                     # Точка входа в приложение
 ├── internal/
 │   ├── service/
-│   │   └── service.go        # Логика сокращения URL
+│   │   └── service.go                  # Логика сокращения URL
 │   └── storage/
-│       ├── postgres_storage.go # Реализация хранилища на PostgreSQL
-│       └── in_memory_storage.go # Реализация in-memory хранилища
+│       ├── postgres_storage.go         # Реализация хранилища на PostgreSQL
+│       └── in_memory_storage.go        # Реализация in-memory хранилища
 ├── test/
-│   └── service_test.go       # Unit-тесты для сервиса
-├── .env                      # Файл конфигурации окружения
-├── Dockerfile                # Dockerfile для сборки образа
-├── go.mod                    # Go модуль и зависимости
-├── go.sum                    # Контрольные суммы зависимостей
-└── README.md                 # Описание проекта и инструкции
+│   └── service_test.go                 # Unit-тесты для сервиса
+├── .env                                # Файл конфигурации окружения
+├── Dockerfile                          # Dockerfile для сборки образа
+├── go.mod                              # Go модуль и зависимости
+├── go.sum                              # Контрольные суммы зависимостей
+└── README.md                           # Описание проекта и инструкции
 ```
 
 ## Описание проекта
