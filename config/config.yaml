@@ -1,0 +1,7 @@
+env: "prod"                   # 3 options to choose from - dev, test, prod
+storage_path: "./storage.db"  # Path to the database file
+http_server: 
+  address: "0.0.0.0:8080"     # Address to bind the server to
+  timeout: 4s                 # Timeout for the server to wait for the request to complete
+  idle_timeout: 30s           # Timeout for the server to wait for the next request
+  user: "vagonaizer"          # User to run the server as
