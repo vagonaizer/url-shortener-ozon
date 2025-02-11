@@ -2,6 +2,7 @@
 # OZON - URL - SHORTENER
 ## Структура проекта
 
+```
 url-shortener-ozon/
 ├── api/
 │   ├── grpcserver/
@@ -24,7 +25,7 @@ url-shortener-ozon/
 ├── go.mod                    # Go модуль и зависимости
 ├── go.sum                    # Контрольные суммы зависимостей
 └── README.md                 # Описание проекта и инструкции
-
+```
 
 ## Описание Проекта
 
