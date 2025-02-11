@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  url-shortener:
+    build: .
+    ports:
+      - "8080:8080"
+      - "50051:50051"
+    environment:
+      # Пример параметра выбора типа хранилища (in-memory или postgres)
+      STORAGE_MODE: "in-memory"
+      # Если будет использоваться PostgreSQL, можно добавить соответствующие переменные:
+      # DB_HOST: postgres
+      # DB_PORT: 5432
+      # DB_USER: user
+      # DB_PASSWORD: password
+      # DB_NAME: url_shortener_db
+
+  postgres:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: url_shortener_db
+    ports:
+      - "5432:5432"
+
