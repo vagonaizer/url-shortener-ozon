@@ -1,5 +1,5 @@
 
-# OZON - URL - SHORTENER
+# OZON-URL-Shortener
 ## Структура проекта
 
 ```
