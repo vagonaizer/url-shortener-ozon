@@ -12,7 +12,6 @@ import (
 	"github.com/vagonaizer/url-shortener-ozon/internal/logger"
 	"github.com/vagonaizer/url-shortener-ozon/internal/service"
 	"github.com/vagonaizer/url-shortener-ozon/internal/storage"
-
 	"google.golang.org/grpc"
 )
 
@@ -46,7 +45,7 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(1)
 
-	// Запуск gRPC сервера в отдельной горутине
+	// Запуск gRPC сервера в основной горутине
 	lis, err := net.Listen("tcp", ":50051")
 	if err != nil {
 		logger.ErrorLogger.Fatalf("Ошибка при создании слушателя: %v", err)
