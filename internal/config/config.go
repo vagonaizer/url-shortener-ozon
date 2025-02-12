@@ -1,4 +1,4 @@
-// package config
+package config
 
 // import (
 // 	"log"
@@ -40,3 +40,4 @@
 
 // 	return &cfg
 // }
+
