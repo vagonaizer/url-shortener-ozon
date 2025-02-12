@@ -11,20 +11,27 @@ url-shortener-ozon/
 │       └── server.go                   # Реализация REST сервера
 ├── cmd/
 │   └── url-shortener/
-│       └── main.go                     # Точка входа в приложение
+│       └── main.go                     # Точка входа в приложение; выбор хранилища
 ├── internal/
+│   ├── config/
+│   │   └── config.go                   # Конфигурация приложения, загрузка переменных окружения
+│   ├── logger/
+│   │   └── logger.go                   # Логгирование (запись в файл и консоль)
 │   ├── service/
 │   │   └── service.go                  # Логика сокращения URL
 │   └── storage/
-│       ├── postgres_storage.go         # Реализация хранилища на PostgreSQL
-│       └── in_memory_storage.go        # Реализация in-memory хранилища
+│       ├── models/
+│       │   └── models.go               # Модели данных (URL, DeviceURL)
+│       ├── in_memory_storage.go        # Реализация in-memory хранилища
+│       └── postgres_storage.go         # Реализация хранилища на PostgreSQL
 ├── test/
 │   └── service_test.go                 # Unit-тесты для сервиса
 ├── .env                                # Файл конфигурации окружения
-├── Dockerfile                          # Dockerfile для сборки образа
-├── go.mod                              # Go модуль и зависимости
+├── .gitignore                          # Git ignore (игнорирует .env, app.log и т.п.)
+├── Dockerfile                          # Dockerfile для сборки Docker-образа
+├── go.mod                              # Go-модуль и зависимости
 ├── go.sum                              # Контрольные суммы зависимостей
-└── README.md                           # Описание проекта и инструкции
+└── README.md                           # Описание проекта и инструкция по запуску
 ```
 
 ## Описание проекта
